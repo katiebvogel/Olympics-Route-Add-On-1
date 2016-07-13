@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="routeApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular Routes</title>
+    <link rel="stylesheet" href=styles/bootstrap/dist/css/bootstrap.min.css/>
+    <link rel="stylesheet" href="styles/mystyle.css"/>
+    <script src="vendor/angular/angular.min.js"></script>
+    <script src="vendor/angular-route/angular-route.min.js"></script>
+    <script src="scripts/client.js"></script>
+    <base href="/" /></base>
+  </head>
+
+  <body>
+    <h1>Welcome</h1>
+    <!--{{3+3}}-->
+
+    <a href="/red"><button class="btn btn-danger btn-lg">Red</button>/a>
+    <a href="/green"><button class="btn btn-success btn-lg">Green</button>/a>
+    <a href="/blue"><button class="btn btn-info btn-lg">Blue</button>/a>
+    <a href="/orange"><button class="btn btn-warning-btn-lg">Orange</button>/a>
+
+<div ng-view>
+
+</div>
+
+  </body>
+</html>

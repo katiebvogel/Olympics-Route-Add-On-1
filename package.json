@@ -1,0 +1,27 @@
+{
+  "name": "olympic-route-add-on",
+  "version": "1.0.0",
+  "description": "Olympics-Route-Add-On",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HerCode/Olympics-Route-Add-On.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HerCode/Olympics-Route-Add-On/issues"
+  },
+  "homepage": "https://github.com/HerCode/Olympics-Route-Add-On#readme",
+  "dependencies": {
+    "angular": "^1.5.7",
+    "bootstrap": "^3.3.6",
+    "express": "^4.14.0",
+    "node": "0.0.0",
+    "route": "^0.2.5"
+  }
+}
