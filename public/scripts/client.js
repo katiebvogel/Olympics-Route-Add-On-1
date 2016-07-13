@@ -1,42 +1,32 @@
-angular.module('routeApp', ['ngRoute']);
+var app = angular.module('routeApp', ['ngRoute']);
 
 angular.module('routeApp').config(function($routeProvider, $locationProvider){
   $routeProvider
-  .when('/red', {
-    templateUrl:'views/red.html',
-    controller:'RedController'
+  .when('/archer', {
+    templateUrl:'views/archery.html',
+    controller:'ArcheryController'
 
+  });
+
+
+  $locationProvider.html5Mode(true);
+});
+
+angular.module('routeApp').controller('ArcheryController', function($scope, $http){
+  $http.get('/archer').then(function(response){
+    console.log(response);
+    $scope.archer = ('Archer is ' + response.data);
   })
-  .when('/green', {
-    templateUrl:'views/green.html',
-    controller:'GreenController'
-  })
-  .when('/blue', {
-    templateUrl:'views/blue.html',
-    controller:'BlueController'
-})
+});
 
-.when('/orange', {
-  templateUrl:'views/orange.html',
-  controller:'OrangeController'
+angular.module('routeApp').controller('GreenController', function($scope){
 
 });
 
-$locationProvider.html5Mode(true);
-});
-
-app.module('routeApp').controller('RedController', function($scope){
+angular.module('routeApp').controller('BlueController', function($scope){
 
 });
 
-app.module('routeApp').controller('GreenController', function($scope){
-
-});
-
-app.module('routeApp').controller('BlueController', function($scope){
-
-});
-
-app.module('routeApp').controller('OrangeController', function($scope){
+angular.module('routeApp').controller('OrangeController', function($scope){
 
 });
